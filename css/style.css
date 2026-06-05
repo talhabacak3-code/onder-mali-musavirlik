@@ -137,6 +137,10 @@ section { padding: 84px 0; }
 .nav-cal > a:hover { background: var(--accent-soft); color: var(--accent); }
 .nav-cal svg { width: 21px; height: 21px; }
 .nav-cal-text { display: none; }
+/* Üst menüde arama ikonu */
+.nav-search > button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 42px; height: 42px; border-radius: 10px; color: var(--navy); background: var(--gray-50); border: 0; cursor: pointer; font: inherit; transition: var(--transition); }
+.nav-search > button:hover { background: var(--accent-soft); color: var(--accent); }
+.nav-search svg { width: 20px; height: 20px; }
 .nav-toggle {
   display: none; flex-direction: column; gap: 5px; cursor: pointer;
   background: none; border: none; padding: 8px;
@@ -496,6 +500,24 @@ a.pratik-item { display: block; text-decoration: none; }
 .vt-table tbody tr:hover td { background: var(--gray-50); }
 @media (max-width: 640px) { .vt-table th, .vt-table td { padding: 10px 14px; font-size: .85rem; } .vt-card h3 { padding: 14px 16px; } }
 
+/* ---------- Site içi arama ---------- */
+.search-overlay { position: fixed; inset: 0; z-index: 3000; background: rgba(12,28,54,.55); backdrop-filter: blur(3px); display: none; padding: 78px 18px; }
+.search-overlay.open { display: block; }
+.search-box { max-width: 640px; margin: 0 auto; background: #fff; border-radius: 16px; box-shadow: var(--shadow-lg); overflow: hidden; }
+.search-head { display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-bottom: 1px solid var(--gray-100); }
+.search-head > svg { width: 20px; height: 20px; color: var(--gray-400); flex-shrink: 0; }
+.search-head input { flex: 1; border: 0; outline: 0; font-size: 1.05rem; font-family: inherit; color: var(--text); background: transparent; }
+.search-close { background: var(--gray-50); border: 0; border-radius: 8px; padding: 6px 10px; cursor: pointer; color: var(--gray-600); font-size: .72rem; font-weight: 700; letter-spacing: .04em; }
+.search-close:hover { background: var(--gray-100); }
+.search-results { max-height: 62vh; overflow-y: auto; }
+.search-results a { display: block; padding: 13px 18px; border-bottom: 1px solid var(--gray-100); text-decoration: none; }
+.search-results a:last-child { border-bottom: 0; }
+.search-results a:hover { background: var(--gray-50); }
+.search-results strong { display: block; color: var(--navy); font-size: .96rem; }
+.search-results > a > span:not(.sr-tag) { color: var(--gray-600); font-size: .85rem; }
+.sr-tag { float: right; font-size: .68rem; font-weight: 700; color: var(--accent); background: var(--accent-soft); padding: 3px 9px; border-radius: 20px; text-transform: uppercase; letter-spacing: .03em; }
+.search-empty { padding: 34px 20px; text-align: center; color: var(--gray-400); }
+
 /* ---------- Floating WhatsApp ---------- */
 .wa-float {
   position: fixed; right: 22px; bottom: 22px; z-index: 999;
@@ -590,6 +612,7 @@ a.pratik-item { display: block; text-decoration: none; }
   .nav-cta { margin: 8px 0 0; }
   .nav-cta .btn { width: 100%; justify-content: center; }
   .nav-cal > a { width: 100%; height: auto; justify-content: flex-start; gap: 12px; padding: 14px 12px; border-radius: 8px; background: transparent; }
+  .nav-search > button { width: 100%; height: auto; justify-content: flex-start; gap: 12px; padding: 14px 12px; border-radius: 8px; background: transparent; }
   .nav-cal-text { display: inline; }
 }
 @media (max-width: 980px) {
