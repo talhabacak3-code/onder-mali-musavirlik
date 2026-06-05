@@ -428,11 +428,14 @@ section { padding: 84px 0; }
 /* ---------- Hero logo paneli ---------- */
 /* Logo — yazının yanında (sağ boşlukta), metinle çakışmadan */
 .hero-logo-bg {
-  position: absolute; right: 8%; top: 50%; transform: translateY(-50%);
-  height: 70%; max-width: 38%; width: auto; object-fit: contain;
-  filter: brightness(0) invert(1) drop-shadow(0 8px 24px rgba(0,0,0,.30));
-  opacity: 1; z-index: 1; pointer-events: none;
+  position: absolute; right: 7%; top: 50%; transform: translateY(-50%);
+  z-index: 1; pointer-events: none; text-align: center; width: min(40%, 420px);
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.30));
 }
+.hlb-mark { width: 118px; height: 118px; border-radius: 50%; background: #fff; color: var(--navy); display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 68px; margin: 0 auto 16px; }
+.hlb-onder { color: #fff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: clamp(42px, 4.6vw, 70px); letter-spacing: .06em; line-height: 1; }
+.hlb-sub { color: #fff; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: clamp(15px, 1.7vw, 24px); letter-spacing: .24em; margin-top: 8px; }
+.hlb-name { color: rgba(255,255,255,.92); font-weight: 500; font-size: clamp(10px, 1vw, 13px); letter-spacing: .16em; margin-top: 12px; }
 /* Dar ekranlarda metnin üstüne binmesin diye gizle */
 @media (max-width: 992px) {
   .hero-logo-bg { display: none; }
