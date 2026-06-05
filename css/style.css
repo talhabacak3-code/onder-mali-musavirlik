@@ -419,10 +419,10 @@ section { padding: 84px 0; }
 /* ---------- Hero logo paneli ---------- */
 /* Logo — yazının yanında (sağ boşlukta), metinle çakışmadan */
 .hero-logo-bg {
-  position: absolute; right: 9%; top: 50%; transform: translateY(-50%);
-  height: 62%; max-width: 34%; width: auto; object-fit: contain;
-  filter: brightness(0) invert(1) drop-shadow(0 6px 18px rgba(0,0,0,.25));
-  opacity: .88; z-index: 1; pointer-events: none;
+  position: absolute; right: 8%; top: 50%; transform: translateY(-50%);
+  height: 70%; max-width: 38%; width: auto; object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 8px 24px rgba(0,0,0,.30));
+  opacity: 1; z-index: 1; pointer-events: none;
 }
 /* Dar ekranlarda metnin üstüne binmesin diye gizle */
 @media (max-width: 992px) {
