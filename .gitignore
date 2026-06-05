@@ -1,0 +1,12 @@
+# Bağımlılıklar / önbellek
+node_modules/
+.cache/
+.DS_Store
+Thumbs.db
+
+# Editör
+.vscode/
+.idea/
+
+# Önizleme sunucusu yapılandırması (yerel)
+.claude/

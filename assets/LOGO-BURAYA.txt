@@ -1,0 +1,14 @@
+LOGO DOSYASI BURAYA KONULACAK
+=============================
+
+Lütfen size ait lacivert "M / ÖNDER MALI MÜŞAVİRLİK" logosunu bu klasöre
+"logo.png" adıyla kaydedin:
+
+    C:\Claude\Mali müşavirlik\assets\logo.png
+
+- Tercihen şeffaf arka planlı PNG (yükseklik en az 100px).
+- Dosya adı tam olarak "logo.png" olmalıdır (küçük harf).
+
+Logo eklenmezse site otomatik olarak lacivert "M" rozetini gösterir,
+yani site logo olmadan da düzgün çalışır. Logoyu ekleyip sayfayı
+yenilediğinizde gerçek logonuz görünecektir.
