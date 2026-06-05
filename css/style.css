@@ -415,6 +415,45 @@ section { padding: 84px 0; }
 .visitor-counter svg { width: 16px; height: 16px; color: #8fc0f4; }
 .visitor-counter strong { color: #fff; font-variant-numeric: tabular-nums; }
 
+/* ---------- Hero logo paneli ---------- */
+.hero-logo {
+  align-self: stretch; min-height: 440px;
+  background: #fff; border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px; box-shadow: var(--shadow-lg);
+}
+.hero-logo img { max-width: 100%; max-height: 340px; width: auto; height: auto; object-fit: contain; }
+.hero-logo .logo-fallback { text-align: center; color: var(--navy); font-family: 'Poppins', sans-serif; }
+.hero-logo .lf-mark {
+  width: 88px; height: 88px; border-radius: 24px; background: var(--navy); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; font-weight: 800; margin: 0 auto 18px;
+}
+.hero-logo .logo-fallback strong { display: block; font-size: 2.1rem; letter-spacing: .06em; }
+.hero-logo .logo-fallback .lf-sub { display: block; font-size: .95rem; letter-spacing: .24em; color: var(--gray-600); margin-top: 4px; }
+.hero-logo .logo-fallback small { display: block; font-size: .72rem; letter-spacing: .14em; color: var(--gray-400); margin-top: 12px; text-transform: uppercase; }
+
+/* ---------- Pratik Bilgiler ---------- */
+.pratik-layout { display: grid; grid-template-columns: 250px 1fr; gap: 34px; align-items: start; }
+.pratik-side { position: sticky; top: 96px; background: #fff; border: 1px solid var(--gray-100); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow-sm); max-height: calc(100vh - 120px); overflow-y: auto; }
+.pratik-side h4 { font-size: .76rem; text-transform: uppercase; letter-spacing: .08em; color: var(--gray-400); margin-bottom: 10px; }
+.pratik-side a { display: block; padding: 8px 10px; border-radius: 8px; color: var(--gray-800); font-size: .9rem; font-weight: 500; }
+.pratik-side a:hover { background: var(--gray-50); color: var(--accent); }
+.pratik-cat { margin-bottom: 36px; scroll-margin-top: 96px; }
+.pratik-cat h3 { font-size: 1.25rem; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-100); display: flex; align-items: center; gap: 10px; }
+.pratik-cat h3 svg { width: 22px; height: 22px; color: var(--accent); flex-shrink: 0; }
+.pratik-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+.pratik-item { padding: 14px 16px; border: 1px solid var(--gray-100); border-left: 3px solid var(--accent); border-radius: 10px; background: #fff; transition: var(--transition); }
+.pratik-item:hover { box-shadow: var(--shadow-sm); transform: translateX(2px); }
+.pratik-item strong { display: block; color: var(--navy); font-size: .96rem; margin-bottom: 3px; }
+.pratik-item span { color: var(--gray-600); font-size: .86rem; }
+.pratik-empty { text-align: center; color: var(--gray-400); padding: 50px 20px; }
+@media (max-width: 900px) {
+  .pratik-layout { grid-template-columns: 1fr; }
+  .pratik-side { position: static; max-height: none; }
+  .pratik-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- Floating WhatsApp ---------- */
 .wa-float {
   position: fixed; right: 22px; bottom: 22px; z-index: 999;
@@ -493,17 +532,8 @@ section { padding: 84px 0; }
 .toast.error { background: #c93a52; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 980px) {
-  .hero .container { grid-template-columns: 1fr; gap: 36px; }
-  .hero-card { max-width: 480px; }
-  .split, .contact-grid { grid-template-columns: 1fr; gap: 34px; }
-  .grid-4 { grid-template-columns: repeat(2,1fr); }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
-  .panel-grid { grid-template-columns: 1fr; }
-  .stats-grid { grid-template-columns: repeat(2,1fr); gap: 30px; }
-}
-@media (max-width: 760px) {
-  section { padding: 60px 0; }
+/* Menü 7 öğeli olduğundan, daha geniş ekranlarda da hamburger menüye geç */
+@media (max-width: 1200px) {
   .nav-toggle { display: flex; }
   .nav-menu {
     position: fixed; inset: 78px 0 auto 0;
@@ -517,6 +547,18 @@ section { padding: 84px 0; }
   .nav-menu a.active::after { display: none; }
   .nav-cta { margin: 8px 0 0; }
   .nav-cta .btn { width: 100%; justify-content: center; }
+}
+@media (max-width: 980px) {
+  .hero .container { grid-template-columns: 1fr; gap: 36px; }
+  .hero-card { max-width: 480px; }
+  .split, .contact-grid { grid-template-columns: 1fr; gap: 34px; }
+  .grid-4 { grid-template-columns: repeat(2,1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .panel-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); gap: 30px; }
+}
+@media (max-width: 760px) {
+  section { padding: 60px 0; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }

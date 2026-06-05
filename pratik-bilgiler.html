@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratik Bilgiler | Önder Mali Müşavirlik</title>
+  <meta name="description" content="Mükellefler için pratik bilgiler: asgari ücret, AGİ, kıdem tazminatı tavanı, damga vergisi, KDV oranları, amortisman sınırı, gecikme zammı, beyanname süreleri ve daha fazlası.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Önder Mali Müşavirlik ana sayfa">
+        <img src="assets/logo.png" alt="Önder Mali Müşavirlik" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span class="brand-fallback" style="display:none">M</span>
+        <span class="brand-text"><strong>Önder Mali Müşavirlik</strong><span>Muhammet Enes Cihat Önder</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+        <li><a href="mevzuat.html">Mevzuat</a></li>
+        <li><a href="bilgi-panosu.html">Bilgi Panosu</a></li>
+        <li><a href="pratik-bilgiler.html">Pratik Bilgiler</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li class="nav-cta"><a class="btn btn-primary btn-sm" href="https://wa.me/905427934254?text=Merhaba,%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852"/></svg>
+          Hemen Ara</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Pratik Bilgiler</h1>
+      <p>Sık ihtiyaç duyulan tutar, oran, had ve sınırları kategoriler halinde derledik. Aramak istediğinizi yazın veya sol menüden başlığa geçin.</p>
+      <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> / Pratik Bilgiler</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="admin-note" style="background:#eaf2fb;border-color:#c3dbf5;color:#1f4e85;margin-bottom:28px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>Buradaki başlıklar bilgilendirme amaçlıdır. Tutar ve oranlar her yıl güncellenir; <strong>güncel rakamlar için bizimle iletişime geçin</strong> veya ilgili resmî kaynağa bakın.</div>
+      </div>
+
+      <div class="mev-search" style="max-width:none;margin-bottom:26px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" placeholder="Pratik bilgilerde ara... (ör. kıdem, KDV, asgari ücret)" data-pratik-search aria-label="Ara">
+      </div>
+
+      <div class="pratik-layout">
+        <aside class="pratik-side">
+          <h4>Başlıklar</h4>
+          <nav id="pratikSide"></nav>
+        </aside>
+        <div id="pratikMain"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;padding-bottom:84px">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Güncel tutar ve oranlar için bize ulaşın</h2>
+        <p>Aradığınız bilginin en güncel hâlini öğrenmek veya kişisel durumunuza göre hesaplama yaptırmak için tek mesaj uzağınızdayız.</p>
+        <div class="cta-actions">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/905427934254?text=Merhaba,%20pratik%20bilgiler%20hakk%C4%B1nda%20soru%20sormak%20istiyorum" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852z"/></svg>
+            WhatsApp'tan Sorun</a>
+          <a class="btn btn-ghost btn-lg" href="bilgi-panosu.html">Mükellef Bilgi Panosu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand"><span class="brand-text"><strong>Önder Mali Müşavirlik</strong><span>Muhammet Enes Cihat Önder</span></span></div>
+          <p>Afyonkarahisar'da işletmelere ve girişimcilere güncel mevzuata uygun, güvenilir mali müşavirlik hizmeti.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/905427934254" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852z"/></svg></a>
+            <a href="tel:+905427934254" aria-label="Telefon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sayfalar</h4>
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+            <li><a href="mevzuat.html">Güncel Mevzuat</a></li>
+            <li><a href="bilgi-panosu.html">Bilgi Panosu</a></li>
+            <li><a href="pratik-bilgiler.html">Pratik Bilgiler</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hizmetler</h4>
+          <ul>
+            <li><a href="hizmetlerimiz.html">Muhasebe & Defter</a></li>
+            <li><a href="hizmetlerimiz.html">Vergi Danışmanlığı</a></li>
+            <li><a href="hizmetlerimiz.html">SGK & Bordro</a></li>
+            <li><a href="hizmetlerimiz.html">Şirket Kuruluşu</a></li>
+            <li><a href="hizmetlerimiz.html">E-Dönüşüm</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <ul class="footer-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Akmescit, Yukarı Pazar Cd. No:64B, Merkez/Afyonkarahisar</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+905427934254">+90 542 793 42 54</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Hafta içi 09:00 – 18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Önder Mali Müşavirlik — Tüm hakları saklıdır.</span>
+        <span class="visitor-counter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Ziyaretçi: <strong data-visitor-count>…</strong></span>
+        <span><a href="admin.html">Yönetim Paneli</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/905427934254?text=Merhaba,%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+    <span class="wa-label">WhatsApp'tan yazın</span>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <script>
+    // Pratik Bilgiler verisi (kategoriler + başlıklar). İçerik bilgilendirme amaçlıdır.
+    var PRATIK = [
+      { c: "Ücret, AGİ ve İşçilik", icon: "users", items: [
+        { t: "Asgari Ücret ve İşverene Maliyeti", d: "Brüt/net asgari ücret ve işverene toplam maliyet kalemleri." },
+        { t: "Asgari Geçim İndirimi (AGİ)", d: "Medeni durum ve çocuk sayısına göre AGİ bilgisi." },
+        { t: "Çıraklar İçin Aylık Asgari Ücret", d: "Aday çırak, çırak ve stajyerlere ödenecek asgari ücret." },
+        { t: "Kıdem Tazminatı Tavanı", d: "Dönemsel kıdem tazminatı tavan tutarı." },
+        { t: "Yıllık Ücretli İzin Süreleri", d: "Kıdeme göre yıllık ücretli izin gün sayıları." },
+        { t: "İşçilik Maliyetleri", d: "Brütten işverene maliyete kadar bordro hesap kalemleri." },
+        { t: "Vergiden Müstesna Yemek Bedeli", d: "Günlük gelir vergisinden istisna yemek bedeli." },
+        { t: "Vergiden Müstesna Çocuk Yardımı", d: "İstisna kapsamındaki çocuk yardımı tutarı." },
+        { t: "Vergiden Müstesna Harcırah ve Ulaşım Bedeli", d: "İstisna harcırah tavanı ve toplu taşıma bedeli." }
+      ]},
+      { c: "SGK ve Bağ-Kur", icon: "shield", items: [
+        { t: "Bağ-Kur Prim Tutarları", d: "4/b (Bağ-Kur) kapsamı aylık prim tutarları." },
+        { t: "SGK Gecikme Zammı Oranları", d: "Süresinde ödenmeyen primlere uygulanan gecikme zammı." },
+        { t: "Prim Teşvikleri", d: "İşverenlerin yararlanabileceği SGK prim teşvikleri." }
+      ]},
+      { c: "Vergi Oranları ve Tarife", icon: "percent", items: [
+        { t: "Gelir Vergisi Tarifesi", d: "Gelir dilimlerine göre uygulanan vergi oranları." },
+        { t: "Geçici Vergi Oranları", d: "Gelir ve kurum geçici vergi oranları." },
+        { t: "Damga Vergisi Oranları", d: "Kâğıt ve işlem türüne göre damga vergisi oran/tutarları." },
+        { t: "Emlak Vergisi Oranları", d: "Bina, arsa ve arazi için emlak vergisi oranları." },
+        { t: "KDV Oranları Listesi", d: "Mal ve hizmetlere göre %1, %10 ve %20 KDV oranları." }
+      ]},
+      { c: "Had, Sınır ve İstisnalar", icon: "ruler", items: [
+        { t: "Amortisman / Demirbaş Sınırı", d: "Doğrudan gider yazılabilecek demirbaş üst sınırı." },
+        { t: "Fatura Düzenleme Sınırı (Fiş Kesme)", d: "Fatura yerine perakende satış fişi kesme üst sınırı." },
+        { t: "Basit Usul Kazanç İndirimi", d: "Basit usule tabi mükelleflerde kazanç indirimi tutarı." },
+        { t: "Değer Artış Kazançları İstisnası", d: "Değer artış kazancında uygulanan istisna tutarı." },
+        { t: "Kira Geliri (Konut) İstisnası", d: "Konut kira gelirinde yıllık istisna tutarı." },
+        { t: "Tevkifata Tabi GMSİ Beyan Sınırı", d: "Tevkifatlı menkul/gayrimenkul sermaye iradı beyan sınırı." },
+        { t: "Tevkifatsız GMSİ Beyan Sınırı", d: "Tevkifata tabi olmayan GMSİ için beyan sınırı." },
+        { t: "Had ve Miktarlar", d: "Vergi kanunlarındaki güncel had ve miktarlar." }
+      ]},
+      { c: "Oranlar ve Endeksler", icon: "trend", items: [
+        { t: "Reeskont ve Avans Faiz Oranları", d: "TCMB reeskont ve avans işlemleri faiz oranları." },
+        { t: "Tüketici Enflasyonu (TÜFE)", d: "Aylık ve yıllık TÜFE oranları." },
+        { t: "Üretici Enflasyonu (Yİ-ÜFE)", d: "Aylık ve yıllık üretici fiyat endeksi oranları." }
+      ]},
+      { c: "Cezalar", icon: "alert", items: [
+        { t: "4857 Sayılı İş Kanunu Para Cezaları", d: "İş Kanunu kapsamında idari para cezaları." },
+        { t: "6331 Sayılı İSG Para Cezaları", d: "İş sağlığı ve güvenliği idari para cezaları." },
+        { t: "SS ve GSS Kanunu İdari Para Cezaları", d: "5510 sayılı Kanun kapsamı idari para cezaları." },
+        { t: "Özel Usulsüzlük Cezaları", d: "VUK kapsamında özel usulsüzlük ceza tutarları." },
+        { t: "Usulsüzlük Cezaları Cetveli", d: "Derecelere göre usulsüzlük ceza cetveli." }
+      ]},
+      { c: "Süreler ve Takvim", icon: "calendar", items: [
+        { t: "Beyanname Verme ve Ödeme Süreleri", d: "Beyan ve ödeme için son tarihler." },
+        { t: "Vergi Takvimi", d: "Aylık vergi ödev ve yükümlülükleri takvimi." }
+      ]}
+    ];
+
+    (function () {
+      function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+      function slug(s){return s.toLowerCase().replace(/ç/g,"c").replace(/ğ/g,"g").replace(/ı/g,"i").replace(/ö/g,"o").replace(/ş/g,"s").replace(/ü/g,"u").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
+      var ICONS = {
+        users:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+        shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+        percent:'<line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>',
+        ruler:'<path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/>',
+        trend:'<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>',
+        alert:'<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+        calendar:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>'
+      };
+      function svg(k){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+(ICONS[k]||ICONS.calendar)+'</svg>';}
+
+      var side = document.getElementById("pratikSide");
+      var main = document.getElementById("pratikMain");
+
+      // Sol menü
+      side.innerHTML = PRATIK.map(function(cat){
+        return '<a href="#'+slug(cat.c)+'">'+esc(cat.c)+'</a>';
+      }).join("");
+
+      // Ana içerik
+      function render(query){
+        var q = (query||"").trim().toLowerCase();
+        var html = "";
+        PRATIK.forEach(function(cat){
+          var items = cat.items.filter(function(it){
+            return !q || (it.t+" "+it.d).toLowerCase().indexOf(q) > -1;
+          });
+          if(!items.length) return;
+          html += '<div class="pratik-cat" id="'+slug(cat.c)+'">' +
+            '<h3>'+svg(cat.icon)+esc(cat.c)+'</h3>' +
+            '<div class="pratik-grid">' +
+            items.map(function(it){
+              return '<div class="pratik-item"><strong>'+esc(it.t)+'</strong><span>'+esc(it.d)+'</span></div>';
+            }).join("") +
+            '</div></div>';
+        });
+        main.innerHTML = html || '<div class="pratik-empty">Aramanıza uygun başlık bulunamadı.</div>';
+      }
+      render("");
+
+      var search = document.querySelector("[data-pratik-search]");
+      if(search) search.addEventListener("input", function(){ render(search.value); });
+    })();
+  </script>
+  <script src="js/visitor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
