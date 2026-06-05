@@ -245,22 +245,22 @@
     // Resmî kaynak logoları şeridi (resmî sitelere yönlendirir, yeni sekme)
     (function () {
       var LOGOS = [
-        { a: "DTVT", t: "DTVT", d: "Devlet Teşkilat Veri Tabanı", u: "https://www.dtvt.cumhurbaskanligi.gov.tr/" },
-        { a: "e-M", t: "e-Mevzuat", d: "Mevzuat Bilgi Sistemi", u: "https://www.mevzuat.gov.tr/" },
-        { a: "R.G.", t: "Resmî Gazete", d: "resmigazete.gov.tr", u: "https://www.resmigazete.gov.tr/" },
-        { a: "e-A", t: "e-Arşiv", d: "Devlet Arşivleri", u: "https://www.devletarsivleri.gov.tr/" },
-        { a: "e-G", t: "e-Genelge", d: "Genelge Bilgi Sistemi", u: "https://www.e-genelge.gov.tr/" },
-        { a: "e-K", t: "e-Kütüphane", d: "Dijital Devlet Arşivleri", u: "https://katalog.devletarsivleri.gov.tr/" },
-        { a: "e-D", t: "türkiye.gov.tr", d: "e-Devlet Kapısı", u: "https://www.turkiye.gov.tr/" },
-        { a: "SGK", t: "SGK", d: "Sosyal Güvenlik Kurumu", u: "https://www.sgk.gov.tr/" },
-        { a: "HMB", t: "Maliye Bakanlığı", d: "Hazine ve Maliye Bakanlığı", u: "https://www.hmb.gov.tr/" },
-        { a: "GİB", t: "GİB", d: "Gelir İdaresi Başkanlığı", u: "https://www.gib.gov.tr/" }
+        { a: "DTVT", t: "DTVT", d: "Devlet Teşkilat Veri Tabanı", u: "https://www.turkiye.gov.tr/cumhurbaskanligi-devlet-teskilati-bilgi-sorgulama", dom: "turkiye.gov.tr" },
+        { a: "e-M", t: "e-Mevzuat", d: "Mevzuat Bilgi Sistemi", u: "https://www.mevzuat.gov.tr/", dom: "mevzuat.gov.tr" },
+        { a: "R.G.", t: "Resmî Gazete", d: "resmigazete.gov.tr", u: "https://www.resmigazete.gov.tr/", dom: "resmigazete.gov.tr" },
+        { a: "e-A", t: "e-Arşiv", d: "Devlet Arşivleri", u: "https://www.devletarsivleri.gov.tr/", dom: "devletarsivleri.gov.tr" },
+        { a: "e-G", t: "e-Genelge", d: "Genelge Bilgi Sistemi", u: "https://www.mevzuat.gov.tr/Genelgeler", dom: "mevzuat.gov.tr" },
+        { a: "e-K", t: "e-Kütüphane", d: "Dijital Devlet Arşivleri", u: "https://katalog.devletarsivleri.gov.tr/", dom: "devletarsivleri.gov.tr" },
+        { a: "e-D", t: "türkiye.gov.tr", d: "e-Devlet Kapısı", u: "https://www.turkiye.gov.tr/", dom: "turkiye.gov.tr" },
+        { a: "SGK", t: "SGK", d: "Sosyal Güvenlik Kurumu", u: "https://www.sgk.gov.tr/", dom: "sgk.gov.tr" },
+        { a: "HMB", t: "Maliye Bakanlığı", d: "Hazine ve Maliye Bakanlığı", u: "https://www.hmb.gov.tr/", dom: "hmb.gov.tr" },
+        { a: "GİB", t: "GİB", d: "Gelir İdaresi Başkanlığı", u: "https://www.gib.gov.tr/", dom: "gib.gov.tr" }
       ];
       var grid = document.getElementById("logosStrip");
       if (!grid) return;
       grid.innerHTML = LOGOS.map(function (l) {
         return '<a class="logo-card" href="' + l.u + '" target="_blank" rel="noopener" title="' + l.t + '">' +
-          '<span class="lc-abbr">' + l.a + '</span>' +
+          '<span class="lc-abbr"><img src="https://www.google.com/s2/favicons?domain=' + l.dom + '&sz=128" alt="' + l.t + ' logo" loading="lazy" onerror="this.parentNode.textContent=\'' + l.a + '\'"></span>' +
           '<strong>' + l.t + '</strong>' +
           '<span>' + l.d + '</span></a>';
       }).join("");

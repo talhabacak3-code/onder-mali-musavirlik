@@ -396,11 +396,13 @@ section { padding: 84px 0; }
 .logo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--accent); color: var(--navy); }
 .logo-card .lc-abbr {
   display: inline-flex; align-items: center; justify-content: center;
-  height: 34px; min-width: 34px; padding: 0 10px; border-radius: 8px;
-  background: var(--accent-soft); color: var(--accent);
-  font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: .02em;
+  width: 54px; height: 54px; padding: 8px; border-radius: 12px;
+  background: #fff; border: 1px solid var(--gray-200); color: var(--accent);
+  font-family: 'Poppins', sans-serif; font-weight: 800; font-size: .95rem; letter-spacing: .02em;
+  overflow: hidden;
 }
-.logo-card:hover .lc-abbr { background: var(--navy); color: #fff; }
+.logo-card .lc-abbr img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.logo-card:hover .lc-abbr { border-color: var(--accent); background: #fff; }
 .logo-card strong { font-size: .92rem; font-weight: 700; line-height: 1.15; }
 .logo-card span { font-size: .68rem; color: var(--gray-400); line-height: 1.2; }
 
