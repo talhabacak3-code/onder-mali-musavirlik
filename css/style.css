@@ -462,6 +462,22 @@ a.pratik-item { display: block; text-decoration: none; }
   .pratik-grid { grid-template-columns: 1fr; }
 }
 
+/* ---------- Hesaplama Araçları ---------- */
+.card.calc:hover { transform: none; }
+.calc h3 { display: flex; align-items: center; gap: 10px; font-size: 1.12rem; margin-bottom: 18px; }
+.calc-ic { width: 40px; height: 40px; border-radius: 11px; background: var(--accent-soft); color: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.calc-ic svg { width: 21px; height: 21px; }
+.calc .field { margin-bottom: 14px; }
+.calc > .btn { width: 100%; justify-content: center; margin-top: 4px; }
+.hint { font-weight: 400; color: var(--gray-400); font-size: .8rem; }
+.calc-result { margin-top: 16px; background: var(--gray-50); border: 1px solid var(--gray-100); border-radius: 10px; padding: 4px 16px; }
+.calc-result:empty { display: none; }
+.cr-row { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px dashed var(--gray-200); font-size: .92rem; color: var(--gray-800); }
+.cr-row:last-child { border-bottom: 0; }
+.cr-strong { font-weight: 800; color: var(--navy); font-size: 1.06rem; }
+.cr-note { font-size: .8rem; color: var(--gray-600); padding: 10px 0 6px; line-height: 1.5; }
+.cr-warn { color: #c93a52; font-size: .9rem; padding: 12px 0; font-weight: 500; }
+
 /* ---------- Floating WhatsApp ---------- */
 .wa-float {
   position: fixed; right: 22px; bottom: 22px; z-index: 999;
@@ -540,8 +556,8 @@ a.pratik-item { display: block; text-decoration: none; }
 .toast.error { background: #c93a52; }
 
 /* ---------- Responsive ---------- */
-/* Menü 7 öğeli olduğundan, daha geniş ekranlarda da hamburger menüye geç */
-@media (max-width: 1200px) {
+/* Menü 8 öğeli olduğundan, daha geniş ekranlarda da hamburger menüye geç */
+@media (max-width: 1300px) {
   .nav-toggle { display: flex; }
   .nav-menu {
     position: fixed; inset: 78px 0 auto 0;

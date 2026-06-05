@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hesaplama Araçları | Önder Mali Müşavirlik</title>
+  <meta name="description" content="Kıdem tazminatı, ihbar tazminatı, KDV, stopaj ve konaklama vergisi hesaplama araçları. Güncel mevzuat çerçevesinde, ücretsiz ve anında sonuç.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Önder Mali Müşavirlik ana sayfa">
+        <img src="assets/logo.png" alt="Önder Mali Müşavirlik" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span class="brand-fallback" style="display:none">M</span>
+        <span class="brand-text"><strong>Önder Mali Müşavirlik</strong><span>Muhammet Enes Cihat Önder</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+        <li><a href="mevzuat.html">Mevzuat</a></li>
+        <li><a href="bilgi-panosu.html">Bilgi Panosu</a></li>
+        <li><a href="pratik-bilgiler.html">Pratik Bilgiler</a></li>
+        <li><a href="hesaplama-araclari.html">Hesaplama</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li class="nav-cta"><a class="btn btn-primary btn-sm" href="https://wa.me/905427934254?text=Merhaba,%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852"/></svg>
+          Hemen Ara</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Hesaplama Araçları</h1>
+      <p>Kıdem ve ihbar tazminatı, KDV, stopaj ve konaklama vergisi için pratik hesaplama araçları. Sonuçlar anında, ücretsiz ve tarayıcınızda hesaplanır.</p>
+      <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> / Hesaplama Araçları</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="admin-note" style="background:#eaf2fb;border-color:#c3dbf5;color:#1f4e85;margin-bottom:28px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>Hesaplamalar bilgilendirme amaçlıdır. Oran ve tavan gibi mevzuata bağlı değerleri ilgili döneme göre girebilirsiniz. <strong>Kesin sonuç ve resmî işlemler için bizimle iletişime geçin.</strong></div>
+      </div>
+
+      <div class="grid grid-2">
+
+        <!-- KIDEM TAZMİNATI -->
+        <div class="card calc">
+          <h3><span class="calc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span> Kıdem Tazminatı Hesaplama</h3>
+          <div class="form-row">
+            <div class="field"><label>İşe Giriş Tarihi</label><input type="date" id="kt_giris"></div>
+            <div class="field"><label>İşten Çıkış Tarihi</label><input type="date" id="kt_cikis"></div>
+          </div>
+          <div class="field"><label>Aylık Brüt Ücret (giydirilmiş, ₺)</label><input type="number" id="kt_brut" min="0" step="0.01" placeholder="ör. 35000"></div>
+          <div class="field"><label>Kıdem Tazminatı Tavanı (₺, döneme ait) <span class="hint">— boş bırakılırsa tavan uygulanmaz</span></label><input type="number" id="kt_tavan" min="0" step="0.01" placeholder="ör. 53000"></div>
+          <button class="btn btn-primary" onclick="hesapKidem()">Hesapla</button>
+          <div class="calc-result" id="kt_sonuc"></div>
+        </div>
+
+        <!-- İHBAR TAZMİNATI -->
+        <div class="card calc">
+          <h3><span class="calc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span> İhbar Tazminatı Hesaplama</h3>
+          <div class="form-row">
+            <div class="field"><label>İşe Giriş Tarihi</label><input type="date" id="it_giris"></div>
+            <div class="field"><label>İşten Çıkış Tarihi</label><input type="date" id="it_cikis"></div>
+          </div>
+          <div class="field"><label>Aylık Brüt Ücret (₺)</label><input type="number" id="it_brut" min="0" step="0.01" placeholder="ör. 35000"></div>
+          <button class="btn btn-primary" onclick="hesapIhbar()">Hesapla</button>
+          <div class="calc-result" id="it_sonuc"></div>
+        </div>
+
+        <!-- KDV -->
+        <div class="card calc">
+          <h3><span class="calc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span> KDV Hesaplama</h3>
+          <div class="field"><label>Tutar (₺)</label><input type="number" id="kdv_tutar" min="0" step="0.01" placeholder="ör. 1000"></div>
+          <div class="form-row">
+            <div class="field"><label>KDV Oranı (%)</label>
+              <select id="kdv_oran"><option value="1">%1</option><option value="10">%10</option><option value="20" selected>%20</option><option value="8">%8</option><option value="18">%18</option></select>
+            </div>
+            <div class="field"><label>İşlem</label>
+              <select id="kdv_mod"><option value="ekle">KDV Ekle (hariç → dâhil)</option><option value="ayir">KDV Ayır (dâhil → hariç)</option></select>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="hesapKdv()">Hesapla</button>
+          <div class="calc-result" id="kdv_sonuc"></div>
+        </div>
+
+        <!-- STOPAJ -->
+        <div class="card calc">
+          <h3><span class="calc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span> Stopaj (Tevkifat) Hesaplama</h3>
+          <div class="field"><label>Tutar (₺)</label><input type="number" id="st_tutar" min="0" step="0.01" placeholder="ör. 10000"></div>
+          <div class="form-row">
+            <div class="field"><label>Stopaj Oranı (%)</label>
+              <select id="st_oran"><option value="20" selected>%20 (işyeri kirası / serbest meslek)</option><option value="10">%10</option><option value="5">%5</option><option value="3">%3</option><option value="2">%2</option><option value="15">%15</option></select>
+            </div>
+            <div class="field"><label>Girilen Tutar</label>
+              <select id="st_mod"><option value="brut">Brüt (stopaj düşülecek)</option><option value="net">Net (brüte tamamla)</option></select>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="hesapStopaj()">Hesapla</button>
+          <div class="calc-result" id="st_sonuc"></div>
+        </div>
+
+        <!-- KONAKLAMA VERGİSİ -->
+        <div class="card calc">
+          <h3><span class="calc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01"/></svg></span> Konaklama Vergisi Hesaplama</h3>
+          <div class="field"><label>Konaklama Bedeli (KDV hariç, ₺)</label><input type="number" id="kv_bedel" min="0" step="0.01" placeholder="ör. 5000"></div>
+          <div class="field"><label>Oran (%) <span class="hint">— yürürlükteki oran %2</span></label><input type="number" id="kv_oran" min="0" step="0.01" value="2"></div>
+          <button class="btn btn-primary" onclick="hesapKonaklama()">Hesapla</button>
+          <div class="calc-result" id="kv_sonuc"></div>
+        </div>
+
+        <!-- BİLGİ KARTI -->
+        <div class="card" style="background:linear-gradient(135deg,var(--navy),var(--navy-light));color:#fff;display:flex;flex-direction:column;justify-content:center">
+          <h3 style="color:#fff">Daha karmaşık bir hesaplama mı gerekiyor?</h3>
+          <p style="color:rgba(255,255,255,.85)">Brüt-net maaş, geçmiş dönem gecikme faizi veya özel durumunuz için kişiye özel hesaplama yapalım.</p>
+          <a class="btn btn-wa" style="margin-top:14px;align-self:flex-start" href="https://wa.me/905427934254?text=Merhaba,%20hesaplama%20konusunda%20yard%C4%B1m%20istiyorum" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852z"/></svg>
+            WhatsApp'tan Sorun</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand"><span class="brand-text"><strong>Önder Mali Müşavirlik</strong><span>Muhammet Enes Cihat Önder</span></span></div>
+          <p>Afyonkarahisar'da işletmelere ve girişimcilere güncel mevzuata uygun, güvenilir mali müşavirlik hizmeti.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/905427934254" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852z"/></svg></a>
+            <a href="tel:+905427934254" aria-label="Telefon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Sayfalar</h4>
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+            <li><a href="mevzuat.html">Güncel Mevzuat</a></li>
+            <li><a href="bilgi-panosu.html">Bilgi Panosu</a></li>
+            <li><a href="pratik-bilgiler.html">Pratik Bilgiler</a></li>
+            <li><a href="hesaplama-araclari.html">Hesaplama Araçları</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hizmetler</h4>
+          <ul>
+            <li><a href="hizmetlerimiz.html">Muhasebe & Defter</a></li>
+            <li><a href="hizmetlerimiz.html">Vergi Danışmanlığı</a></li>
+            <li><a href="hizmetlerimiz.html">SGK & Bordro</a></li>
+            <li><a href="hizmetlerimiz.html">Şirket Kuruluşu</a></li>
+            <li><a href="hizmetlerimiz.html">E-Dönüşüm</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <ul class="footer-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Akmescit, Yukarı Pazar Cd. No:64B, Merkez/Afyonkarahisar</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+905427934254">+90 542 793 42 54</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Hafta içi 09:00 – 18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Önder Mali Müşavirlik — Tüm hakları saklıdır.</span>
+        <span class="visitor-counter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Ziyaretçi: <strong data-visitor-count>…</strong></span>
+        <span><a href="admin.html">Yönetim Paneli</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/905427934254?text=Merhaba,%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın">
+    <span class="wa-label">WhatsApp'tan yazın</span>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <script>
+    // ---- Yardımcılar ----
+    function num(id){ var v=parseFloat((document.getElementById(id).value+"").replace(",",".")); return isNaN(v)?0:v; }
+    function TL(x){ return (x||0).toLocaleString("tr-TR",{minimumFractionDigits:2,maximumFractionDigits:2})+" ₺"; }
+    function row(label,val,strong){ return '<div class="cr-row"><span>'+label+'</span><span'+(strong?' class="cr-strong"':'')+'>'+val+'</span></div>'; }
+    function uyari(id,msg){ document.getElementById(id).innerHTML='<div class="cr-warn">'+msg+'</div>'; }
+    var DAMGA=0.00759; // damga vergisi oranı (binde 7,59)
+
+    function gunFarki(g1,g2){ // tam gün farkı
+      var d1=new Date(g1), d2=new Date(g2);
+      return Math.round((d2-d1)/(1000*60*60*24));
+    }
+    function sureMetni(gun){
+      var yil=Math.floor(gun/365), kalan=gun-yil*365, ay=Math.floor(kalan/30), g=kalan-ay*30;
+      return yil+" yıl "+ay+" ay "+g+" gün";
+    }
+
+    // ---- KIDEM ----
+    function hesapKidem(){
+      var g=document.getElementById("kt_giris").value, c=document.getElementById("kt_cikis").value;
+      var brut=num("kt_brut"), tavan=num("kt_tavan");
+      if(!g||!c||brut<=0){ uyari("kt_sonuc","Lütfen tarihleri ve brüt ücreti girin."); return; }
+      var gun=gunFarki(g,c);
+      if(gun<=0){ uyari("kt_sonuc","Çıkış tarihi giriş tarihinden sonra olmalı."); return; }
+      if(gun<365){ uyari("kt_sonuc","Kıdem tazminatı için en az 1 yıl (365 gün) çalışma gerekir. Süre: "+sureMetni(gun)); return; }
+      var esas = tavan>0 ? Math.min(brut,tavan) : brut; // 30 günlük tazminata esas ücret
+      var brutTaz = esas * (gun/365);
+      var damga = brutTaz*DAMGA;
+      var net = brutTaz - damga;
+      var html = row("Çalışma süresi", sureMetni(gun)) +
+        row("Tazminata esas 30 günlük ücret", TL(esas)) +
+        (tavan>0 && brut>tavan ? '<div class="cr-note">Brüt ücret tavanı aştığı için tavan uygulandı.</div>' : '') +
+        row("Brüt kıdem tazminatı", TL(brutTaz)) +
+        row("Damga vergisi (binde 7,59)", "− "+TL(damga)) +
+        row("Net kıdem tazminatı", TL(net), true);
+      document.getElementById("kt_sonuc").innerHTML = html;
+    }
+
+    // ---- İHBAR ----
+    function hesapIhbar(){
+      var g=document.getElementById("it_giris").value, c=document.getElementById("it_cikis").value, brut=num("it_brut");
+      if(!g||!c||brut<=0){ uyari("it_sonuc","Lütfen tarihleri ve brüt ücreti girin."); return; }
+      var gun=gunFarki(g,c);
+      if(gun<=0){ uyari("it_sonuc","Çıkış tarihi giriş tarihinden sonra olmalı."); return; }
+      var hafta;
+      if(gun<180) hafta=2; else if(gun<547) hafta=4; else if(gun<1095) hafta=6; else hafta=8;
+      var gunluk=brut/30;
+      var brutIhbar=gunluk*hafta*7;
+      var damga=brutIhbar*DAMGA;
+      var html = row("Kıdem süresi", sureMetni(gun)) +
+        row("İhbar süresi", hafta+" hafta ("+(hafta*7)+" gün)") +
+        row("Brüt ihbar tazminatı", TL(brutIhbar)) +
+        row("Damga vergisi (binde 7,59)", "− "+TL(damga)) +
+        row("Damga sonrası", TL(brutIhbar-damga), true) +
+        '<div class="cr-note">İhbar tazminatından ayrıca gelir vergisi (stopaj) kesilir; net tutar vergi diliminize göre değişir.</div>';
+      document.getElementById("it_sonuc").innerHTML = html;
+    }
+
+    // ---- KDV ----
+    function hesapKdv(){
+      var tutar=num("kdv_tutar"), oran=num("kdv_oran"), mod=document.getElementById("kdv_mod").value;
+      if(tutar<=0){ uyari("kdv_sonuc","Lütfen bir tutar girin."); return; }
+      var haric,kdv,dahil;
+      if(mod==="ekle"){ haric=tutar; kdv=tutar*oran/100; dahil=tutar+kdv; }
+      else { dahil=tutar; haric=tutar/(1+oran/100); kdv=dahil-haric; }
+      var html = row("KDV hariç tutar", TL(haric)) +
+        row("KDV (%"+oran+")", TL(kdv)) +
+        row("KDV dâhil tutar", TL(dahil), true);
+      document.getElementById("kdv_sonuc").innerHTML = html;
+    }
+
+    // ---- STOPAJ ----
+    function hesapStopaj(){
+      var tutar=num("st_tutar"), oran=num("st_oran"), mod=document.getElementById("st_mod").value;
+      if(tutar<=0){ uyari("st_sonuc","Lütfen bir tutar girin."); return; }
+      var brut,net,stopaj;
+      if(mod==="brut"){ brut=tutar; stopaj=brut*oran/100; net=brut-stopaj; }
+      else { net=tutar; brut=net/(1-oran/100); stopaj=brut-net; }
+      var html = row("Brüt tutar", TL(brut)) +
+        row("Stopaj (%"+oran+")", "− "+TL(stopaj)) +
+        row("Net (ele geçen) tutar", TL(net), true);
+      document.getElementById("st_sonuc").innerHTML = html;
+    }
+
+    // ---- KONAKLAMA ----
+    function hesapKonaklama(){
+      var bedel=num("kv_bedel"), oran=num("kv_oran");
+      if(bedel<=0){ uyari("kv_sonuc","Lütfen konaklama bedelini girin."); return; }
+      var vergi=bedel*oran/100, toplam=bedel+vergi;
+      var html = row("Konaklama bedeli (KDV hariç)", TL(bedel)) +
+        row("Konaklama vergisi (%"+oran+")", TL(vergi)) +
+        row("Vergi dâhil toplam", TL(toplam), true) +
+        '<div class="cr-note">Konaklama vergisi matrahı KDV hariç bedeldir; KDV ayrıca hesaplanır.</div>';
+      document.getElementById("kv_sonuc").innerHTML = html;
+    }
+  </script>
+  <script src="js/visitor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
