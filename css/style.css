@@ -248,7 +248,7 @@ section { padding: 84px 0; }
 .split-media {
   border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
   background: linear-gradient(135deg, var(--navy), var(--navy-light));
-  min-height: 420px; display: flex; align-items: center; justify-content: center;
+  min-height: 500px; display: flex; align-items: center; justify-content: center;
   color: #fff; position: relative;
 }
 .split-media .badge-float {
