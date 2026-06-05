@@ -101,8 +101,10 @@ section { padding: 84px 0; }
   transition: var(--transition);
 }
 .site-header.scrolled { box-shadow: var(--shadow-sm); }
+.site-header .container { max-width: 1320px; }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
   height: 78px;
 }
 .brand { display: flex; align-items: center; gap: 12px; }
@@ -114,13 +116,14 @@ section { padding: 84px 0; }
   font-family: 'Poppins', sans-serif;
 }
 .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
-.brand-text strong { font-size: 1.12rem; font-weight: 700; color: var(--navy); }
-.brand-text span { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gray-400); font-family: 'Inter', sans-serif; }
+.brand-text strong { font-size: 1.1rem; font-weight: 700; color: var(--navy); white-space: nowrap; }
+.brand-text span { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-400); font-family: 'Inter', sans-serif; white-space: nowrap; }
 
-.nav-menu { display: flex; align-items: center; gap: 4px; list-style: none; }
+.nav-menu { display: flex; align-items: center; gap: 2px; list-style: none; }
 .nav-menu a {
-  color: var(--gray-800); font-weight: 500; font-size: .96rem;
-  padding: 9px 15px; border-radius: 8px; position: relative;
+  color: var(--gray-800); font-weight: 500; font-size: .94rem;
+  padding: 9px 13px; border-radius: 8px; position: relative;
+  white-space: nowrap;
 }
 .nav-menu a:hover { color: var(--navy); background: var(--gray-50); }
 .nav-menu a.active { color: var(--accent); }
@@ -368,6 +371,34 @@ section { padding: 84px 0; }
   justify-content: space-between; font-size: .85rem; color: rgba(255,255,255,.5);
 }
 .footer-bottom a { color: rgba(255,255,255,.7); }
+
+/* ---------- Resmî kaynak logoları şeridi ---------- */
+.logos-strip { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.logo-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; width: 150px; min-height: 92px; padding: 14px 12px; text-align: center;
+  background: #fff; border: 1px solid var(--gray-200); border-radius: 12px;
+  color: var(--navy); transition: var(--transition);
+}
+.logo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--accent); color: var(--navy); }
+.logo-card .lc-abbr {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 34px; min-width: 34px; padding: 0 10px; border-radius: 8px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: .02em;
+}
+.logo-card:hover .lc-abbr { background: var(--navy); color: #fff; }
+.logo-card strong { font-size: .92rem; font-weight: 700; line-height: 1.15; }
+.logo-card span { font-size: .68rem; color: var(--gray-400); line-height: 1.2; }
+
+/* ---------- Ziyaretçi sayacı ---------- */
+.visitor-counter {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+  padding: 7px 14px; border-radius: 30px; font-size: .85rem; color: rgba(255,255,255,.85);
+}
+.visitor-counter svg { width: 16px; height: 16px; color: #8fc0f4; }
+.visitor-counter strong { color: #fff; font-variant-numeric: tabular-nums; }
 
 /* ---------- Floating WhatsApp ---------- */
 .wa-float {
