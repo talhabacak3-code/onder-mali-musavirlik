@@ -1,0 +1,18 @@
+EKİP / OFİS FOTOĞRAFI BURAYA KONULACAK
+======================================
+
+Ana sayfadaki "Hakkımızda" bölümünde görünmesi için ofis/ekip
+fotoğrafını bu klasöre "ekip.jpg" adıyla kaydedin:
+
+    C:\Claude\Mali müşavirlik\assets\ekip.jpg
+
+- Dosya adı tam olarak "ekip.jpg" olmalı (küçük harf, .jpg uzantılı).
+- Yatay (geniş) bir fotoğraf daha iyi durur; otomatik kırpılarak alana
+  sığdırılır (object-fit: cover).
+- Fotoğraf eklenmezse bölüm lacivert zeminli yedek görünümde kalır,
+  site yine düzgün çalışır.
+
+Kaydettikten sonra yayına almak için (proje klasöründe):
+    git add assets/ekip.jpg
+    git commit -m "Ekip fotoğrafı eklendi"
+    git push
