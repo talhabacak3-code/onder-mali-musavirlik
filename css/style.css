@@ -417,15 +417,15 @@ section { padding: 84px 0; }
 .visitor-counter strong { color: #fff; font-variant-numeric: tabular-nums; }
 
 /* ---------- Hero logo paneli ---------- */
-/* Logo arka planda filigran olarak */
+/* Logo arka planda filigran olarak — küçük, sola yakın, soluk */
 .hero-logo-bg {
-  position: absolute; right: -30px; top: 50%; transform: translateY(-50%);
-  height: 80%; max-width: 50%; width: auto; object-fit: contain;
+  position: absolute; left: 46%; top: 50%; transform: translate(-50%, -50%);
+  height: 48%; max-width: 30%; width: auto; object-fit: contain;
   filter: brightness(0) invert(1);
-  opacity: .08; z-index: 1; pointer-events: none;
+  opacity: .06; z-index: 1; pointer-events: none;
 }
 @media (max-width: 760px) {
-  .hero-logo-bg { right: 50%; transform: translate(50%, -50%); max-width: 86%; height: auto; opacity: .05; }
+  .hero-logo-bg { left: 50%; max-width: 70%; height: auto; opacity: .04; }
 }
 .hero-logo .logo-fallback { text-align: center; color: var(--navy); font-family: 'Poppins', sans-serif; }
 .hero-logo .lf-mark {
