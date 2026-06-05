@@ -6,8 +6,14 @@
 
 (function () {
   // --- Ayarlar ---
-  const PASSWORD = "onder2026";              // ÖNERİ: yayına almadan önce değiştirin
+  const DEFAULT_PASSWORD = "onder2026";      // ilk/varsayılan şifre
+  const PASS_KEY = "onder_admin_sifre";      // değiştirilen şifre burada saklanır
   const SESSION_KEY = "onder_admin_oturum";
+
+  function getPassword() {
+    try { return localStorage.getItem(PASS_KEY) || DEFAULT_PASSWORD; }
+    catch (e) { return DEFAULT_PASSWORD; }
+  }
 
   const esc = (s) => String(s == null ? "" : s)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -47,7 +53,7 @@
   if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (loginPass.value === PASSWORD) {
+      if (loginPass.value === getPassword()) {
         sessionStorage.setItem(SESSION_KEY, "1");
         loginErr.style.display = "none";
         showPanel();
@@ -212,6 +218,34 @@
       renderTable();
     }
   });
+
+  // ---- Şifre değiştir ----
+  const sifreForm = document.getElementById("sifreForm");
+  if (sifreForm) {
+    const eski = document.getElementById("sifreEski");
+    const yeni = document.getElementById("sifreYeni");
+    const yeni2 = document.getElementById("sifreYeni2");
+    const msg = document.getElementById("sifreMsg");
+    function sMsg(t, ok) {
+      msg.textContent = t;
+      msg.style.color = ok ? "#1f9d57" : "#c93a52";
+      msg.style.display = "block";
+    }
+    sifreForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (eski.value !== getPassword()) { sMsg("Mevcut şifre hatalı.", false); return; }
+      if (yeni.value.length < 4) { sMsg("Yeni şifre en az 4 karakter olmalı.", false); return; }
+      if (yeni.value !== yeni2.value) { sMsg("Yeni şifreler eşleşmiyor.", false); return; }
+      try {
+        localStorage.setItem(PASS_KEY, yeni.value);
+        sifreForm.reset();
+        sMsg("Şifre başarıyla güncellendi.", true);
+        toast("Şifre güncellendi.");
+      } catch (err) {
+        sMsg("Şifre kaydedilemedi.", false);
+      }
+    });
+  }
 
   // ---- Başlat ----
   if (isLoggedIn()) showPanel(); else showLogin();

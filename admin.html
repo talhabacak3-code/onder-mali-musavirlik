@@ -27,7 +27,7 @@
         <p id="loginErr" style="display:none;color:#c93a52;font-size:.88rem;margin-bottom:14px">Hatalı şifre. Tekrar deneyin.</p>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Giriş Yap</button>
       </form>
-      <p style="font-size:.78rem;color:var(--gray-400);margin:18px 0 0">Varsayılan şifre: <strong>onder2026</strong><br>(js/admin.js içinden değiştirebilirsiniz)</p>
+      <p style="font-size:.78rem;color:var(--gray-400);margin:18px 0 0">Varsayılan şifre: <strong>onder2026</strong><br>(Giriş yaptıktan sonra panelden değiştirebilirsiniz)</p>
       <p style="margin-top:16px"><a href="index.html" style="font-size:.85rem">← Siteye dön</a></p>
     </div>
   </div>
@@ -110,6 +110,30 @@
             </table>
           </div>
         </div>
+      </div>
+
+      <!-- Şifre Değiştir -->
+      <div class="panel" id="sifrePanel" style="margin-top:26px;max-width:560px">
+        <h2>Şifre Değiştir</h2>
+        <form id="sifreForm">
+          <div class="field">
+            <label for="sifreEski">Mevcut Şifre</label>
+            <input type="password" id="sifreEski" autocomplete="current-password" required>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="sifreYeni">Yeni Şifre</label>
+              <input type="password" id="sifreYeni" autocomplete="new-password" required>
+            </div>
+            <div class="field">
+              <label for="sifreYeni2">Yeni Şifre (Tekrar)</label>
+              <input type="password" id="sifreYeni2" autocomplete="new-password" required>
+            </div>
+          </div>
+          <p id="sifreMsg" style="display:none;font-size:.88rem;margin-bottom:12px"></p>
+          <button type="submit" class="btn btn-primary">Şifreyi Güncelle</button>
+        </form>
+        <p style="font-size:.78rem;color:var(--gray-400);margin:14px 0 0">Yeni şifre bu tarayıcıda saklanır; istediğiniz zaman tekrar değiştirebilirsiniz. Farklı cihaz/tarayıcıda varsayılan şifre geçerlidir.</p>
       </div>
 
     </div>
