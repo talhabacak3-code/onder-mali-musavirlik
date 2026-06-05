@@ -478,6 +478,19 @@ a.pratik-item { display: block; text-decoration: none; }
 .cr-note { font-size: .8rem; color: var(--gray-600); padding: 10px 0 6px; line-height: 1.5; }
 .cr-warn { color: #c93a52; font-size: .9rem; padding: 12px 0; font-weight: 500; }
 
+/* ---------- Vergi Takvimi ---------- */
+.vt-card { background: #fff; border: 1px solid var(--gray-100); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; margin-bottom: 26px; }
+.vt-card h3 { display: flex; align-items: center; gap: 10px; font-size: 1.12rem; padding: 18px 22px; background: var(--gray-50); border-bottom: 1px solid var(--gray-100); margin: 0; }
+.vt-card h3 svg { width: 20px; height: 20px; color: var(--accent); flex-shrink: 0; }
+.vt-table { width: 100%; border-collapse: collapse; }
+.vt-table th, .vt-table td { text-align: left; padding: 13px 22px; border-bottom: 1px solid var(--gray-100); font-size: .93rem; color: var(--gray-800); vertical-align: top; }
+.vt-table th { font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-400); font-weight: 700; }
+.vt-table td:first-child { font-weight: 600; color: var(--navy); }
+.vt-table .vt-day { color: var(--accent); font-weight: 700; white-space: nowrap; }
+.vt-table tbody tr:last-child td { border-bottom: 0; }
+.vt-table tbody tr:hover td { background: var(--gray-50); }
+@media (max-width: 640px) { .vt-table th, .vt-table td { padding: 10px 14px; font-size: .85rem; } .vt-card h3 { padding: 14px 16px; } }
+
 /* ---------- Floating WhatsApp ---------- */
 .wa-float {
   position: fixed; right: 22px; bottom: 22px; z-index: 999;

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mükellef Bilgi Panosu | Önder Mali Müşavirlik</title>
-  <meta name="description" content="Mükellefler için faydalı bağlantılar: güncel mevzuat, GİB, KGK, TÜRMOB, Ticaret Sicil Gazetesi, KOSGEB, Danıştay ve Yargıtay kararları ve daha fazlası.">
+  <title>Vergi Takvimi 2026 | Önder Mali Müşavirlik</title>
+  <meta name="description" content="2026 vergi takvimi: KDV, muhtasar (MUHSGK), damga vergisi, geçici vergi, kurumlar, gelir vergisi, konaklama vergisi, GEKAP (poşet) beyanı ve SGK son ödeme günleri.">
   <link rel="icon" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,28 +39,98 @@
 
   <section class="page-hero">
     <div class="container">
-      <h1>Mükellef Bilgi Panosu</h1>
-      <p>İşinize yarayacak güncel mevzuat, kurum ve hesaplama kaynaklarını tek sayfada topladık. Kartlara tıklayarak ilgili resmî/kaynak sayfaya ulaşabilirsiniz.</p>
-      <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> / Mükellef Bilgi Panosu</div>
+      <h1>Vergi Takvimi 2026</h1>
+      <p>Beyanname gönderme ve ödeme son günleri tek sayfada. Aylık, dönemsel ve yıllık yükümlülükleri kaçırmayın.</p>
+      <div class="breadcrumb"><a href="index.html">Ana Sayfa</a> / Vergi Takvimi 2026</div>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <div class="grid grid-4" id="panoGrid"></div>
-      <p style="text-align:center;color:var(--gray-400);font-size:.86rem;margin-top:30px">
-        Bağlantılar ilgili kurum ve kaynakların resmî web sitelerine yönlendirir, yeni sekmede açılır. Adres değişikliklerinde bize bildirebilirsiniz.
-      </p>
+      <div class="admin-note" style="background:#fff8e6;border-color:#f0dfa8;color:#8a6d1b;margin-bottom:28px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>Son gün <strong>hafta sonu veya resmî tatile</strong> denk gelirse süre, takip eden ilk iş gününe uzar. Tarihler bilgilendirme amaçlıdır; kesin ve güncel takvim için
+          <a href="https://www.gib.gov.tr/vergi-takvimi" target="_blank" rel="noopener" style="color:#8a6d1b;text-decoration:underline">GİB Vergi Takvimi</a>'ni esas alın.</div>
+      </div>
+
+      <!-- Aylık tekrarlayan -->
+      <div class="vt-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Her Ay Tekrarlayan Beyan ve Ödemeler</h3>
+        <div style="overflow-x:auto">
+          <table class="vt-table">
+            <thead><tr><th>Yükümlülük</th><th>Beyan / Bildirim Son Günü</th><th>Ödeme Son Günü</th></tr></thead>
+            <tbody>
+              <tr><td>KDV Beyannamesi (1 No.lu)</td><td><span class="vt-day">İzleyen ayın 28'i</span></td><td><span class="vt-day">İzleyen ayın 28'i</span></td></tr>
+              <tr><td>Muhtasar ve Prim Hizmet Beyannamesi (MUHSGK)</td><td><span class="vt-day">İzleyen ayın 26'sı</span></td><td>Vergi: 26'sı · SGK primi: ayın son günü</td></tr>
+              <tr><td>Damga Vergisi Beyannamesi (sürekli mükellefiyet)</td><td><span class="vt-day">İzleyen ayın 26'sı</span></td><td><span class="vt-day">İzleyen ayın 26'sı</span></td></tr>
+              <tr><td>Konaklama Vergisi Beyannamesi</td><td><span class="vt-day">İzleyen ayın 26'sı</span></td><td><span class="vt-day">İzleyen ayın 26'sı</span></td></tr>
+              <tr><td>SGK 4/a (işçi) Primleri</td><td>MUHSGK ile birlikte</td><td>İzleyen ayın son günü</td></tr>
+              <tr><td>Bağ-Kur (4/b) Primi</td><td>—</td><td>İzleyen ayın son günü</td></tr>
+              <tr><td>Turizm Payı (aylık mükellefler)</td><td>İzleyen ayın son günü</td><td>İzleyen ayın son günü</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Geçici vergi -->
+      <div class="vt-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Geçici Vergi (Üçer Aylık) — 2026</h3>
+        <div style="overflow-x:auto">
+          <table class="vt-table">
+            <thead><tr><th>Dönem</th><th>Beyan Son Günü</th><th>Ödeme Son Günü</th></tr></thead>
+            <tbody>
+              <tr><td>1. Dönem (Ocak–Şubat–Mart)</td><td><span class="vt-day">17 Mayıs 2026</span></td><td><span class="vt-day">17 Mayıs 2026</span></td></tr>
+              <tr><td>2. Dönem (Nisan–Mayıs–Haziran)</td><td><span class="vt-day">17 Ağustos 2026</span></td><td><span class="vt-day">17 Ağustos 2026</span></td></tr>
+              <tr><td>3. Dönem (Temmuz–Ağustos–Eylül)</td><td><span class="vt-day">17 Kasım 2026</span></td><td><span class="vt-day">17 Kasım 2026</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="padding:0 22px 18px;color:var(--gray-600);font-size:.86rem">Not: 4. geçici vergi dönemi (Ekim–Aralık) kaldırılmıştır.</p>
+      </div>
+
+      <!-- Yıllık -->
+      <div class="vt-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Yıllık Beyannameler (2025 dönemi, 2026'da verilir)</h3>
+        <div style="overflow-x:auto">
+          <table class="vt-table">
+            <thead><tr><th>Beyanname</th><th>Beyan Dönemi / Son Günü</th><th>Ödeme</th></tr></thead>
+            <tbody>
+              <tr><td>Yıllık Gelir Vergisi Beyannamesi</td><td><span class="vt-day">1–31 Mart 2026</span></td><td>1. taksit: Mart sonu · 2. taksit: Temmuz sonu</td></tr>
+              <tr><td>Basit Usul Yıllık Gelir Vergisi</td><td><span class="vt-day">Şubat 2026</span></td><td>1. taksit: Şubat · 2. taksit: Haziran</td></tr>
+              <tr><td>Kurumlar Vergisi Beyannamesi</td><td><span class="vt-day">1–30 Nisan 2026</span></td><td>30 Nisan 2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- GEKAP / Poşet -->
+      <div class="vt-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18l-2 13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L3 6z"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> GEKAP / Geri Kazanım (Poşet) Beyannamesi — 6 Aylık</h3>
+        <div style="overflow-x:auto">
+          <table class="vt-table">
+            <thead><tr><th>Dönem</th><th>Beyan ve Ödeme Son Günü</th></tr></thead>
+            <tbody>
+              <tr><td>Temmuz–Aralık 2025</td><td><span class="vt-day">31 Ocak 2026</span></td></tr>
+              <tr><td>Ocak–Haziran 2026</td><td><span class="vt-day">31 Temmuz 2026</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:6px">
+        <a class="btn btn-primary" href="https://www.gib.gov.tr/vergi-takvimi" target="_blank" rel="noopener">GİB Resmî Vergi Takvimi
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      </div>
     </div>
   </section>
 
   <section style="padding-top:0;padding-bottom:84px">
     <div class="container">
       <div class="cta-band reveal">
-        <h2>Aradığınızı bulamadınız mı?</h2>
-        <p>İhtiyaç duyduğunuz mevzuat, beyanname veya hesaplama konusunda bize yazın; doğru kaynağa yönlendirelim.</p>
+        <h2>Beyan ve ödemelerinizi biz takip edelim</h2>
+        <p>Son tarihleri kaçırma riskini ortadan kaldıralım; tüm beyan ve ödeme süreçlerinizi sizin adınıza yönetelim.</p>
         <div class="cta-actions">
-          <a class="btn btn-wa btn-lg" href="https://wa.me/905427934254?text=Merhaba,%20bilgi%20panosu%20hakk%C4%B1nda%20yard%C4%B1m%20istiyorum" target="_blank" rel="noopener">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/905427934254?text=Merhaba,%20vergi%20takvimi%20ve%20beyan%20takibi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852z"/></svg>
             WhatsApp'tan Yazın</a>
         </div>
@@ -125,40 +195,6 @@
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.6 5.355l-1.04 3.798 3.94-1.852zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
   </a>
 
-  <script>
-    // Mükellef Bilgi Panosu bağlantıları (resmî/kaynak sitelere yönlendirir)
-    var PANO_LINKS = [
-      { t: "Mükellef Bilgi Panosu", d: "GİB İnteraktif Vergi Dairesi", u: "https://ivd.gib.gov.tr/" },
-      { t: "Güncel Mevzuat", d: "Resmî Mevzuat Bilgi Sistemi", u: "https://www.mevzuat.gov.tr/" },
-      { t: "Basından Yazılar", d: "Anadolu Ajansı – Ekonomi", u: "https://www.aa.com.tr/tr/ekonomi" },
-      { t: "Muhasebe Standartları", d: "Kamu Gözetimi Kurumu (KGK)", u: "https://www.kgk.gov.tr/" },
-      { t: "SMMM Odaları", d: "TÜRMOB", u: "https://www.turmob.org.tr/" },
-      { t: "Ticaret Sicil Gazetesi", d: "Türkiye Ticaret Sicili Gazetesi", u: "https://www.ticaretsicil.gov.tr/" },
-      { t: "Mortgage / Konut Kredisi", d: "Konut kredisi hesaplama", u: "https://www.hesapkurdu.com/konut-kredisi" },
-      { t: "KOSGEB Mevzuatı", d: "KOSGEB resmî sitesi", u: "https://www.kosgeb.gov.tr/" },
-      { t: "Tek Düzen Hesap Planı", d: "THP referansı", u: "https://www.muhasebedersleri.com/genel-muhasebe/tekduzen-hesap-plani.html" },
-      { t: "Basel II", d: "BDDK", u: "https://www.bddk.org.tr/" },
-      { t: "Ücretsiz Programlar", d: "GİB Beyanname Düzenleme (e-Beyanname)", u: "https://ebeyanname.gib.gov.tr/" },
-      { t: "Ekonomi Haberleri", d: "BloombergHT", u: "https://www.bloomberght.com/" },
-      { t: "Dış Ticaret Mevzuatı", d: "T.C. Ticaret Bakanlığı", u: "https://www.ticaret.gov.tr/" },
-      { t: "Danıştay Kararları", d: "Danıştay", u: "https://www.danistay.gov.tr/" },
-      { t: "Yargıtay Kararları", d: "Yargıtay Karar Arama", u: "https://karararama.yargitay.gov.tr/" },
-      { t: "Dilekçematik", d: "GİB – Form ve dilekçeler", u: "https://www.gib.gov.tr/" }
-    ];
-    (function () {
-      var icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
-      var grid = document.getElementById("panoGrid");
-      grid.innerHTML = PANO_LINKS.map(function (l) {
-        return '<a class="card reveal" href="' + l.u + '" target="_blank" rel="noopener">' +
-          '<div class="card-icon">' + icon + '</div>' +
-          '<h3 style="font-size:1.08rem">' + l.t + '</h3>' +
-          '<p style="font-size:.9rem">' + l.d + '</p>' +
-          '<span class="card-link">Sayfaya git ' +
-          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>' +
-          '</a>';
-      }).join("");
-    })();
-  </script>
   <script src="js/visitor.js"></script>
   <script src="js/main.js"></script>
 </body>
