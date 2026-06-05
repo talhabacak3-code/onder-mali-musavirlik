@@ -174,7 +174,8 @@ section { padding: 84px 0; }
 .hero-ministats div { display: flex; flex-direction: column; }
 .hero-ministats strong { font-family: 'Poppins', sans-serif; font-size: 1.7rem; color: #fff; line-height: 1; }
 .hero-ministats span { font-size: .82rem; color: rgba(255,255,255,.72); margin-top: 5px; }
-.hero .container { position: relative; z-index: 2; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 50px; align-items: center; }
+.hero .container { position: relative; z-index: 2; }
+.hero-content { max-width: 680px; }
 .hero h1 { color: #fff; font-size: clamp(2.1rem, 4.6vw, 3.4rem); font-weight: 700; margin-bottom: 20px; }
 .hero h1 .hl { color: #8fc0f4; }
 .hero p { font-size: 1.12rem; color: rgba(255,255,255,.85); max-width: 540px; margin-bottom: 32px; }
@@ -416,16 +417,15 @@ section { padding: 84px 0; }
 .visitor-counter strong { color: #fff; font-variant-numeric: tabular-nums; }
 
 /* ---------- Hero logo paneli ---------- */
-.hero-logo {
-  align-self: stretch; min-height: 380px;
-  display: flex; align-items: center; justify-content: center;
-  padding: 20px;
+/* Logo arka planda filigran olarak */
+.hero-logo-bg {
+  position: absolute; right: -30px; top: 50%; transform: translateY(-50%);
+  height: 80%; max-width: 50%; width: auto; object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: .08; z-index: 1; pointer-events: none;
 }
-.hero-logo img {
-  max-width: 100%; max-height: 300px; width: auto; height: auto; object-fit: contain;
-  /* Lacivert logoyu beyaza çevir (şeffaf zemin korunur), mavi zemine yumuşakça otursun */
-  filter: brightness(0) invert(1) drop-shadow(0 8px 22px rgba(0,0,0,.28));
-  opacity: .72;
+@media (max-width: 760px) {
+  .hero-logo-bg { right: 50%; transform: translate(50%, -50%); max-width: 86%; height: auto; opacity: .05; }
 }
 .hero-logo .logo-fallback { text-align: center; color: var(--navy); font-family: 'Poppins', sans-serif; }
 .hero-logo .lf-mark {
@@ -447,9 +447,12 @@ section { padding: 84px 0; }
 .pratik-cat h3 { font-size: 1.25rem; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-100); display: flex; align-items: center; gap: 10px; }
 .pratik-cat h3 svg { width: 22px; height: 22px; color: var(--accent); flex-shrink: 0; }
 .pratik-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+a.pratik-item { display: block; text-decoration: none; }
 .pratik-item { padding: 14px 16px; border: 1px solid var(--gray-100); border-left: 3px solid var(--accent); border-radius: 10px; background: #fff; transition: var(--transition); }
-.pratik-item:hover { box-shadow: var(--shadow-sm); transform: translateX(2px); }
-.pratik-item strong { display: block; color: var(--navy); font-size: .96rem; margin-bottom: 3px; }
+.pratik-item:hover { box-shadow: var(--shadow); transform: translateX(3px); border-left-color: var(--navy); }
+.pratik-item strong { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--navy); font-size: .96rem; margin-bottom: 3px; }
+.pratik-item strong svg { width: 15px; height: 15px; color: var(--gray-400); flex-shrink: 0; transition: var(--transition); }
+.pratik-item:hover strong, .pratik-item:hover strong svg { color: var(--accent); }
 .pratik-item span { color: var(--gray-600); font-size: .86rem; }
 .pratik-empty { text-align: center; color: var(--gray-400); padding: 50px 20px; }
 @media (max-width: 900px) {

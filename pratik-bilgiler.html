@@ -138,55 +138,69 @@
 
   <script>
     // Pratik Bilgiler verisi (kategoriler + başlıklar). İçerik bilgilendirme amaçlıdır.
+    var GIB="https://www.gib.gov.tr/", GIBVT="https://www.gib.gov.tr/vergi-takvimi",
+        SGK="https://www.sgk.gov.tr/", CSGB="https://www.csgb.gov.tr/",
+        TCMB="https://www.tcmb.gov.tr/", TUIK="https://www.tuik.gov.tr/",
+        MEVZUAT="https://www.mevzuat.gov.tr/";
     var PRATIK = [
       { c: "Ücret, AGİ ve İşçilik", icon: "users", items: [
-        { t: "Asgari Ücret ve İşverene Maliyeti", d: "Brüt/net asgari ücret ve işverene toplam maliyet kalemleri." },
-        { t: "Asgari Geçim İndirimi (AGİ)", d: "Medeni durum ve çocuk sayısına göre AGİ bilgisi." },
-        { t: "Çıraklar İçin Aylık Asgari Ücret", d: "Aday çırak, çırak ve stajyerlere ödenecek asgari ücret." },
-        { t: "Kıdem Tazminatı Tavanı", d: "Dönemsel kıdem tazminatı tavan tutarı." },
-        { t: "Yıllık Ücretli İzin Süreleri", d: "Kıdeme göre yıllık ücretli izin gün sayıları." },
-        { t: "İşçilik Maliyetleri", d: "Brütten işverene maliyete kadar bordro hesap kalemleri." },
-        { t: "Vergiden Müstesna Yemek Bedeli", d: "Günlük gelir vergisinden istisna yemek bedeli." },
-        { t: "Vergiden Müstesna Çocuk Yardımı", d: "İstisna kapsamındaki çocuk yardımı tutarı." },
-        { t: "Vergiden Müstesna Harcırah ve Ulaşım Bedeli", d: "İstisna harcırah tavanı ve toplu taşıma bedeli." }
+        { t: "Asgari Ücret ve İşverene Maliyeti", d: "Brüt/net asgari ücret ve işverene toplam maliyet kalemleri.", u: CSGB },
+        { t: "Asgari Geçim İndirimi (AGİ)", d: "Medeni durum ve çocuk sayısına göre AGİ bilgisi.", u: GIB },
+        { t: "Çıraklar İçin Aylık Asgari Ücret", d: "Aday çırak, çırak ve stajyerlere ödenecek asgari ücret.", u: CSGB },
+        { t: "Kıdem Tazminatı Tavanı", d: "Dönemsel kıdem tazminatı tavan tutarı.", u: CSGB },
+        { t: "İhbar Önelleri", d: "Kıdeme göre ihbar süreleri ve tazminatı.", u: CSGB },
+        { t: "Yıllık Ücretli İzin Süreleri", d: "Kıdeme göre yıllık ücretli izin gün sayıları.", u: CSGB },
+        { t: "İşçilik Maliyetleri", d: "Brütten işverene maliyete kadar bordro hesap kalemleri.", u: SGK },
+        { t: "Vergiden Müstesna Yemek Bedeli", d: "Günlük gelir vergisinden istisna yemek bedeli.", u: GIB },
+        { t: "Vergiden Müstesna Çocuk Yardımı", d: "İstisna kapsamındaki çocuk yardımı tutarı.", u: GIB },
+        { t: "Vergiden Müstesna Harcırah ve Ulaşım Bedeli", d: "İstisna harcırah tavanı ve toplu taşıma bedeli.", u: GIB }
       ]},
       { c: "SGK ve Bağ-Kur", icon: "shield", items: [
-        { t: "Bağ-Kur Prim Tutarları", d: "4/b (Bağ-Kur) kapsamı aylık prim tutarları." },
-        { t: "SGK Gecikme Zammı Oranları", d: "Süresinde ödenmeyen primlere uygulanan gecikme zammı." },
-        { t: "Prim Teşvikleri", d: "İşverenlerin yararlanabileceği SGK prim teşvikleri." }
+        { t: "Bağ-Kur Prim Tutarları", d: "4/b (Bağ-Kur) kapsamı aylık prim tutarları.", u: SGK },
+        { t: "SGK Prim Oranları", d: "4/a sigortalılar için işçi/işveren prim oranları.", u: SGK },
+        { t: "SGK Gecikme Zammı Oranları", d: "Süresinde ödenmeyen primlere uygulanan gecikme zammı.", u: SGK },
+        { t: "Prim Teşvikleri", d: "İşverenlerin yararlanabileceği SGK prim teşvikleri.", u: SGK },
+        { t: "Prime Esas Kazanç (PEK) Tavan/Taban", d: "Asgari ve azami prime esas kazanç tutarları.", u: SGK }
       ]},
       { c: "Vergi Oranları ve Tarife", icon: "percent", items: [
-        { t: "Gelir Vergisi Tarifesi", d: "Gelir dilimlerine göre uygulanan vergi oranları." },
-        { t: "Geçici Vergi Oranları", d: "Gelir ve kurum geçici vergi oranları." },
-        { t: "Damga Vergisi Oranları", d: "Kâğıt ve işlem türüne göre damga vergisi oran/tutarları." },
-        { t: "Emlak Vergisi Oranları", d: "Bina, arsa ve arazi için emlak vergisi oranları." },
-        { t: "KDV Oranları Listesi", d: "Mal ve hizmetlere göre %1, %10 ve %20 KDV oranları." }
+        { t: "Gelir Vergisi Tarifesi", d: "Gelir dilimlerine göre uygulanan vergi oranları.", u: GIB },
+        { t: "Kurumlar Vergisi Oranı", d: "Kurum kazançlarına uygulanan vergi oranı.", u: GIB },
+        { t: "Geçici Vergi Oranları", d: "Gelir ve kurum geçici vergi oranları.", u: GIB },
+        { t: "Damga Vergisi Oranları", d: "Kâğıt ve işlem türüne göre damga vergisi oran/tutarları.", u: GIB },
+        { t: "Emlak Vergisi Oranları", d: "Bina, arsa ve arazi için emlak vergisi oranları.", u: GIB },
+        { t: "KDV Oranları Listesi", d: "Mal ve hizmetlere göre %1, %10 ve %20 KDV oranları.", u: GIB },
+        { t: "Motorlu Taşıtlar Vergisi (MTV)", d: "Araç cinsi ve yaşına göre MTV tutarları.", u: GIB },
+        { t: "Harçlar", d: "Yargı, tapu, noter ve diğer işlem harçları.", u: GIB }
       ]},
       { c: "Had, Sınır ve İstisnalar", icon: "ruler", items: [
-        { t: "Amortisman / Demirbaş Sınırı", d: "Doğrudan gider yazılabilecek demirbaş üst sınırı." },
-        { t: "Fatura Düzenleme Sınırı (Fiş Kesme)", d: "Fatura yerine perakende satış fişi kesme üst sınırı." },
-        { t: "Basit Usul Kazanç İndirimi", d: "Basit usule tabi mükelleflerde kazanç indirimi tutarı." },
-        { t: "Değer Artış Kazançları İstisnası", d: "Değer artış kazancında uygulanan istisna tutarı." },
-        { t: "Kira Geliri (Konut) İstisnası", d: "Konut kira gelirinde yıllık istisna tutarı." },
-        { t: "Tevkifata Tabi GMSİ Beyan Sınırı", d: "Tevkifatlı menkul/gayrimenkul sermaye iradı beyan sınırı." },
-        { t: "Tevkifatsız GMSİ Beyan Sınırı", d: "Tevkifata tabi olmayan GMSİ için beyan sınırı." },
-        { t: "Had ve Miktarlar", d: "Vergi kanunlarındaki güncel had ve miktarlar." }
+        { t: "Amortisman / Demirbaş Sınırı", d: "Doğrudan gider yazılabilecek demirbaş üst sınırı.", u: GIB },
+        { t: "Fatura Düzenleme Sınırı (Fiş Kesme)", d: "Fatura yerine perakende satış fişi kesme üst sınırı.", u: GIB },
+        { t: "Basit Usul Kazanç İndirimi", d: "Basit usule tabi mükelleflerde kazanç indirimi tutarı.", u: GIB },
+        { t: "Değer Artış Kazançları İstisnası", d: "Değer artış kazancında uygulanan istisna tutarı.", u: GIB },
+        { t: "Kira Geliri (Konut) İstisnası", d: "Konut kira gelirinde yıllık istisna tutarı.", u: GIB },
+        { t: "Engellilik İndirimi", d: "Derecelere göre aylık engellilik (sakatlık) indirimi.", u: GIB },
+        { t: "Tevkifata Tabi GMSİ Beyan Sınırı", d: "Tevkifatlı menkul/gayrimenkul sermaye iradı beyan sınırı.", u: GIB },
+        { t: "Tevkifatsız GMSİ Beyan Sınırı", d: "Tevkifata tabi olmayan GMSİ için beyan sınırı.", u: GIB },
+        { t: "Yeniden Değerleme Oranı", d: "Vergi/ceza tutarlarının güncellenmesinde kullanılan oran.", u: GIB },
+        { t: "Had ve Miktarlar", d: "Vergi kanunlarındaki güncel had ve miktarlar.", u: GIB }
       ]},
       { c: "Oranlar ve Endeksler", icon: "trend", items: [
-        { t: "Reeskont ve Avans Faiz Oranları", d: "TCMB reeskont ve avans işlemleri faiz oranları." },
-        { t: "Tüketici Enflasyonu (TÜFE)", d: "Aylık ve yıllık TÜFE oranları." },
-        { t: "Üretici Enflasyonu (Yİ-ÜFE)", d: "Aylık ve yıllık üretici fiyat endeksi oranları." }
+        { t: "Reeskont ve Avans Faiz Oranları", d: "TCMB reeskont ve avans işlemleri faiz oranları.", u: TCMB },
+        { t: "Gecikme Zammı / Tecil Faizi", d: "Vergi borçlarında gecikme zammı ve tecil faizi oranları.", u: GIB },
+        { t: "Tüketici Enflasyonu (TÜFE)", d: "Aylık ve yıllık TÜFE oranları.", u: TUIK },
+        { t: "Üretici Enflasyonu (Yİ-ÜFE)", d: "Aylık ve yıllık üretici fiyat endeksi oranları.", u: TUIK }
       ]},
       { c: "Cezalar", icon: "alert", items: [
-        { t: "4857 Sayılı İş Kanunu Para Cezaları", d: "İş Kanunu kapsamında idari para cezaları." },
-        { t: "6331 Sayılı İSG Para Cezaları", d: "İş sağlığı ve güvenliği idari para cezaları." },
-        { t: "SS ve GSS Kanunu İdari Para Cezaları", d: "5510 sayılı Kanun kapsamı idari para cezaları." },
-        { t: "Özel Usulsüzlük Cezaları", d: "VUK kapsamında özel usulsüzlük ceza tutarları." },
-        { t: "Usulsüzlük Cezaları Cetveli", d: "Derecelere göre usulsüzlük ceza cetveli." }
+        { t: "4857 Sayılı İş Kanunu Para Cezaları", d: "İş Kanunu kapsamında idari para cezaları.", u: CSGB },
+        { t: "6331 Sayılı İSG Para Cezaları", d: "İş sağlığı ve güvenliği idari para cezaları.", u: CSGB },
+        { t: "SS ve GSS Kanunu İdari Para Cezaları", d: "5510 sayılı Kanun kapsamı idari para cezaları.", u: SGK },
+        { t: "Özel Usulsüzlük Cezaları", d: "VUK kapsamında özel usulsüzlük ceza tutarları.", u: GIB },
+        { t: "Usulsüzlük Cezaları Cetveli", d: "Derecelere göre usulsüzlük ceza cetveli.", u: GIB }
       ]},
       { c: "Süreler ve Takvim", icon: "calendar", items: [
-        { t: "Beyanname Verme ve Ödeme Süreleri", d: "Beyan ve ödeme için son tarihler." },
-        { t: "Vergi Takvimi", d: "Aylık vergi ödev ve yükümlülükleri takvimi." }
+        { t: "Beyanname Verme ve Ödeme Süreleri", d: "Beyan ve ödeme için son tarihler.", u: GIBVT },
+        { t: "Vergi Takvimi", d: "Aylık vergi ödev ve yükümlülükleri takvimi.", u: GIBVT },
+        { t: "Resmî Mevzuat (Kanun/Tebliğ)", d: "Yürürlükteki kanun, yönetmelik ve tebliğ metinleri.", u: MEVZUAT }
       ]}
     ];
 
@@ -225,7 +239,9 @@
             '<h3>'+svg(cat.icon)+esc(cat.c)+'</h3>' +
             '<div class="pratik-grid">' +
             items.map(function(it){
-              return '<div class="pratik-item"><strong>'+esc(it.t)+'</strong><span>'+esc(it.d)+'</span></div>';
+              return '<a class="pratik-item" href="'+(it.u||"#")+'" target="_blank" rel="noopener">' +
+                '<strong>'+esc(it.t)+' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></strong>' +
+                '<span>'+esc(it.d)+'</span></a>';
             }).join("") +
             '</div></div>';
         });
