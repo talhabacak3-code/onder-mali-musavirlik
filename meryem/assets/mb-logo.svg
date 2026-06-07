@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 116" role="img" aria-label="Meryem Badem Bacak — MB">
+  <!-- M -->
+  <path d="M13 99 V21 L52 70 91 21 V99"
+        fill="none" stroke="#13294b" stroke-width="15"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- B (spine + two bowls), shares optical weight with M -->
+  <path d="M103 21 V99
+           M103 21 H128 a19.5 19.5 0 0 1 0 39 H103
+           M103 60 H132 a20 20 0 0 1 0 40 H103"
+        fill="none" stroke="#13294b" stroke-width="15"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- gold prestige underline -->
+  <rect x="13" y="108" width="121" height="5" rx="2.5" fill="#c9a227"/>
+</svg>

@@ -1,0 +1,16 @@
+MB LOGO HAKKINDA
+================
+
+Site, Meryem Badem Bacak (SMMM) markasının "MB" amblemini vektörel
+(SVG) olarak kullanır:
+
+    assets/mb-logo.svg
+
+Bu SVG her ekran boyutunda keskin görünür ve ayrı bir dosya gerektirmez.
+
+Gerçek/raster logonuzu (PNG) kullanmak isterseniz:
+1) Logoyu "mb-logo.png" adıyla bu klasöre (assets/) koyun.
+2) Tüm sayfalardaki  assets/mb-logo.svg  referanslarını
+   assets/mb-logo.png  ile değiştirin (ör. düzenleyiciyle "Tümünü Değiştir").
+
+Tercihen şeffaf arka planlı, en az 120px yükseklikte bir PNG kullanın.
