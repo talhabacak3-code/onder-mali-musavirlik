@@ -609,8 +609,8 @@ a.pratik-item { display: block; text-decoration: none; }
 .toast.error { background: #c93a52; }
 
 /* ---------- Responsive ---------- */
-/* Menü 8 öğeli olduğundan, daha geniş ekranlarda da hamburger menüye geç */
-@media (max-width: 1300px) {
+/* Menü kalabalık olduğundan, dar masaüstlerinde de hamburger menüye geç */
+@media (max-width: 1450px) {
   .nav-toggle { display: flex; }
   .nav-menu {
     position: fixed; inset: 78px 0 auto 0;
@@ -860,3 +860,10 @@ a.pratik-item { display: block; text-decoration: none; }
 /* ---- Adım numarası ve SSS oku ---- */
 .faq-q svg { color: var(--accent); }
 .faq-item.open .faq-q { color: var(--accent); }
+
+/* ---- Başlık taşma düzeltmesi (marka ile menü çakışmasın) ---- */
+.site-header .container { max-width: 1460px; }
+.nav { gap: 26px; }
+.brand { flex-shrink: 0; }
+.nav-menu { flex-wrap: nowrap; }
+.nav-menu a { padding: 9px 11px; font-size: .92rem; }
