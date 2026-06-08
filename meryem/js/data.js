@@ -37,11 +37,11 @@ const MBB = (function () {
     },
     {
       id: "seed-4",
-      baslik: "Ofisimiz Yeni Adresinde Hizmetinizde",
+      baslik: "Afyonkarahisar Merkez'de Hizmetinizdeyiz",
       tarih: "2025-11-20",
       kategori: "Duyuru",
-      ozet: "Meryem Badem Bacak olarak, danışanlarımıza daha iyi hizmet verebilmek için yeni ofisimize taşındık. yeni adresimizde sizleri ağırlamaktan mutluluk duyarız.",
-      icerik: "Yeni adresimiz: Adres bilgisi yakında eklenecektir.\n\nRandevu ve görüşmeleriniz için WhatsApp hattımızdan veya telefonla bize ulaşabilirsiniz. Kahvemiz hazır!"
+      ozet: "Meryem Badem Bacak (SMMM) olarak Afyonkarahisar Merkez ve çevresindeki esnaf, KOBİ ve girişimcilere muhasebe, vergi ve danışmanlık hizmeti sunuyoruz.",
+      icerik: "Afyonkarahisar Merkez'deki ofisimizde; muhasebe ve defter, vergi & beyanname, SGK & bordro, şirket kuruluşu ve e-dönüşüm hizmetlerini tek elden yürütüyoruz.\n\nRandevu ve görüşmeleriniz için WhatsApp hattımızdan veya telefonla bize ulaşabilirsiniz. Kahvemiz hazır!"
     },
     {
       id: "seed-5",

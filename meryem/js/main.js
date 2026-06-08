@@ -54,6 +54,16 @@
       const k = el.getAttribute("data-site");
       if (S[k] != null && S[k] !== "") el.textContent = S[k];
     });
+    // Harita — config.maps doluysa Google Haritalar iframe'ini enjekte et,
+    // boşsa içerideki nazik yer tutucu olduğu gibi kalır.
+    const mapEl = document.querySelector("[data-site-map]");
+    if (mapEl && S.maps) {
+      mapEl.classList.remove("map-placeholder");
+      mapEl.innerHTML =
+        '<iframe src="' + S.maps + '" loading="lazy" allowfullscreen ' +
+        'referrerpolicy="no-referrer-when-downgrade" ' +
+        'title="Ofis konumu — ' + (S.city || "") + '"></iframe>';
+    }
   }
 
   // --- Sayı sayacı animasyonu ([data-count="10"] data-suffix="+") ---

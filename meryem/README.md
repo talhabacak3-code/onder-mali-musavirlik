@@ -1,8 +1,11 @@
 # Meryem Badem Bacak — Serbest Muhasebeci Mali Müşavir (SMMM)
 
 Saf **HTML / CSS / JavaScript** ile geliştirilen kurumsal mali müşavirlik web sitesi.
-`ondermalimusavirlik.com` referans alınarak hazırlanan bu sürüm; lacivert + altın prestij teması,
-MB amblemi, animasyonlu sayaçlar, süreç şeridi ve SSS akordeonu ile **üst sürüm** olarak tasarlanmıştır.
+Afyonkarahisar Merkez'de hizmet veren **Meryem Badem Bacak (SMMM)** için hazırlanmıştır.
+Tasarım kimliği **Editoryal Prestij**: lacivert (`#0E2A47`) + zümrüt (`#0E7C66`) + krem (`#F7F5EF`)
+paleti, **Fraunces** serif başlıklar, bol beyaz alan ve ince çizgi ayraçlarla banka/hukuk bürosu
+prestiji veren özgün bir görünüm. MB amblemi, animasyonlu sayaçlar, süreç şeridi, SSS akordeonu,
+çalışan hesaplama araçları ve mevzuat yönetim paneli içerir.
 
 ## Sayfalar
 Ana Sayfa, Hakkımızda, Hizmetlerimiz, Mevzuat, Bilgi Panosu, Pratik Bilgiler,
@@ -15,17 +18,19 @@ nesnesinden yönetilir. Gerçek bilgileri girip kaydedin — `tel:` / WhatsApp b
 
 ```js
 window.SITE = {
-  phoneDisplay: "+90 5XX XXX XX XX",
-  phoneDigits:  "905000000000",   // 90 + numara (sadece rakam)
-  whatsapp:     "905000000000",
-  email:        "",
-  address:      "Adres bilgisi yakında eklenecektir",
-  city:         "Şehir / İlçe",
-  maps:         ""                 // İletişim haritası için Google Maps embed URL'si
+  phoneDisplay: "+90 545 904 96 14",
+  phoneDigits:  "905459049614",   // 90 + numara (sadece rakam)
+  whatsapp:     "905459049614",   // telefon araması ile aynı numara
+  email:        "",                // boşsa e-posta alanı gizlenir
+  address:      "Afyonkarahisar / Merkez",
+  city:         "Afyonkarahisar",
+  maps:         "https://www.google.com/maps?q=Afyonkarahisar%20Merkez&z=13&output=embed"
 };
 ```
 
-> Şu an iletişim alanları **placeholder**'dır.
+> İletişim bilgileri girilmiştir. **Tam açık adres** geldiğinde `address` ve `maps`
+> alanlarını (ör. `"Mahalle Cadde No Afyonkarahisar"`) güncellemeniz yeterlidir;
+> harita ve tüm `[data-site]` alanları otomatik güncellenir.
 
 ## Logo
 Marka amblemi vektörel olarak `assets/mb-logo.svg` dosyasındadır (her ekranda keskin).
